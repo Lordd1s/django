@@ -18,5 +18,8 @@ from django.urls import path
 from eco import views
 
 urlpatterns = [
-    path('', views.index),
+    path('', views.home, name="home"),
+    path('all_list/', views.all_list, name="all_list"),
+    path('offer/', views.offer, name="offer"),
+    path('/download/', views.download, name='download')
 ]

@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  </head>
+<body>
+  <header>
+    <div class="head">
+      <span><a href="{% url 'home' %}">Home</a></span>
+      <span><a href="{% url 'offer' %}">Proposal for ecology</a></span>
+      <span><a href="{% url 'all_list' %}">All proposes</a></span>
+    </div>
+  </header>
+  <div class="invisible"></div>
+  <main>
+    {% block main %}
+    <h1 class="welcome">Welcome!</h1>
+    {% endblock %}
+  </main>
+</body>
+</html>

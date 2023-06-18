@@ -1,0 +1,22 @@
+{% extends "home.html" %}
+
+{% load static %}
+
+{% block main %}
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Title</th>
+        <th>Proposes</th>
+    </tr>
+    {% for data in context %}
+    <tr>
+        <td>{{ data.name }}</td>
+        <td>{{ data.title }}</td>
+        <td>{{ data.description }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<button class="form back-to-home"><a href="{% url 'download' %}">Download as File!</a></button>
+{% endblock %}
